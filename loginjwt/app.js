@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const validator = require('email-validator');
 
 const cors = require('cors');
-
+const port = process.env.PORT || 3001;
 const app = express();
 
 
