@@ -66,7 +66,7 @@ app.get('/user', checkToken, async (req, res) => {
 
 // Registro de usuário
 app.post('/register', async (req, res) => {
-  const { nome, sobrenome, email, senha } = req.body;
+  const { nome, sobrenome, email, senha, tipo } = req.body;
 
   // Validações
   if (!nome || !sobrenome || !email || !senha) {
@@ -93,7 +93,8 @@ app.post('/register', async (req, res) => {
     nome,
     sobrenome,
     email,
-    senha: passwordHash
+    senha: passwordHash,
+    tipo
   });
 
   try {
